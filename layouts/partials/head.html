@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} {{ print $.Site.Params.title_hyphen }} {{ $.Site.Title
+    }}{{ end }}</title>
+
+{{ with $.Params.reset }}
+{{ $reset := (printf "resets/%s*" . | resources.GetMatch) }}
+{{ if $reset }}
+<link rel="stylesheet"
+    href="{{ $reset.RelPermalink }}">
+{{ end }}
+{{ end }}
+
+{{ with $.Params.typography }}
+{{ $typography := (printf "typography/%s*" . | resources.GetMatch) }}
+{{ if $typography }}
+<link rel="stylesheet"
+    href="{{ $typography.RelPermalink }}">
+{{ end }}
+{{ end }}
+
+{{ $sass := resources.Get "scss/style.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet"
+    href="{{ $style.RelPermalink }}">
