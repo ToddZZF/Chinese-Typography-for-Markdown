@@ -1,2 +1,7 @@
 title: 中文排版样式
 defaultContentLanguage: 'zh-cn'
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

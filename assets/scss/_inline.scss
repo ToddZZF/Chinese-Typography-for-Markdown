@@ -1,0 +1,42 @@
+@import "variables";
+
+@mixin inline {
+
+    b,
+    strong {
+        font-weight: $font-weight-bold;
+        //border-bottom: 1px solid currentColor;
+    }
+
+    em,
+    i {
+        font-style: italic;
+        //border-bottom: 1px dashed currentColor;
+    }
+
+    a {
+        display: inline;
+        color: blue;
+        text-decoration: none;
+        transition: all 250ms ease-in;
+        box-shadow: 0 -1px rgba(0, 0, 255, 0.5)inset;
+        background-color: transparent;
+    }
+
+    a:not(:visited)::after {
+        content: "↩";
+    }
+
+    a:hover {
+        color: white;
+        box-shadow: 0 -1*$line-height-normal rgba(0, 0, 255, 0.5) inset;
+    }
+
+    a:visited:not(:hover) {
+        color: #551AB8;
+    }
+
+    a:visited::after{
+        content: "✓";
+    }
+}

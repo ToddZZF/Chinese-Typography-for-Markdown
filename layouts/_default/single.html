@@ -1,13 +1,7 @@
-{{ with $.Params.typography }}
-{{ $typography := (printf "typography/%s*" . | resources.GetMatch) }}
-{{ if $typography }}
-<link rel="stylesheet"
-    href="{{ $typography.RelPermalink }}">
-{{ end }}
-{{ end }}
+
 
 {{ define "main" }}
-    <div class="{{with $.Params.typography }}.{{ end }}">
+    <div class="{{with $.Params.typography }}{{.}}{{ end }} main">
         {{ .Content }}
     </div>
 {{ end }}

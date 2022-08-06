@@ -4,6 +4,7 @@
 <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} {{ print $.Site.Params.title_hyphen }} {{ $.Site.Title
     }}{{ end }}</title>
 
+{{/*  设置 reset 样式  */}}
 {{ with $.Params.reset }}
 {{ $reset := (printf "resets/%s*" . | resources.GetMatch) }}
 {{ if $reset }}
@@ -12,15 +13,21 @@
 {{ end }}
 {{ end }}
 
+{{/*  设置 typography 样式  */}}
 {{ with $.Params.typography }}
-{{ $typography := (printf "typography/%s*" . | resources.GetMatch) }}
+{{ $typography := ((printf "**/%s*" . | resources.GetMatch) | resources.ToCSS) }}
 {{ if $typography }}
 <link rel="stylesheet"
     href="{{ $typography.RelPermalink }}">
 {{ end }}
 {{ end }}
 
-{{ $sass := resources.Get "scss/style.scss" }}
+{{/*  网站排版  */}}
+{{ $sass := resources.Get "scss/grid.scss" }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet"
     href="{{ $style.RelPermalink }}">
+
+
+{{/*  Alpine.js 框架  */}}
+<script src="//unpkg.com/alpinejs" defer></script>

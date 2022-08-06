@@ -1,3 +1,14 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
+<ul class="page-list">
+    {{ range $.Pages }}
+        <li class="page-item">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if .IsPage }}
+            <span>文章</span>
+            {{ else }}
+            <span>集合</span>
+            {{ end }}
+        </li>
+    {{ end }}
+</ul>
 {{ end }}
