@@ -1,0 +1,53 @@
+@import "variables";
+
+@mixin table {
+    table {
+        display: block;
+        max-width: fit-content;
+        table-layout: auto;
+        caption-side: top;
+
+        margin-block-start: $margin-small;
+        margin-block-end: $margin-normal;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+        border-collapse: collapse;
+        word-break: break-word;
+    }
+
+    td,
+    th {
+        padding-block-start: $margin-small;
+        padding-block-end: $margin-small;
+        padding-inline-start: $margin-normal;
+        padding-inline-end: $margin-normal;
+        border: 1px solid black;
+        min-width: 3em;
+    }
+
+    th {
+        font-weight: $font-weight-bold;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    tr:last-child {
+        border-bottom: 2px solid black;
+    }
+
+    th:first-child,
+    td:first-child {
+        border-left: none;
+    }
+
+    th:last-child,
+    td:last-child {
+        border-right: none;
+    }
+
+    tr:hover {
+        background-color: rgb(233,240,245);
+        transition: background 150ms ease;
+    }
+}

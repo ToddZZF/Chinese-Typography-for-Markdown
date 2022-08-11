@@ -1,6 +1,7 @@
 ---
 title: Markdown测试文件
-typography: heti
+reset: normalize
+typography: mdstyle
 ---
 
 测试文件覆盖如下元素：
@@ -11,6 +12,8 @@ typography: heti
 |p|段落|
 |strong|粗体|
 |em|斜体|
+|del|删除线|
+|blockquote|引用|
 |ul|无序列表|
 |ol|有序列表|
 |li checkbox|任务列表|
@@ -30,7 +33,7 @@ typography: heti
 <h6>H6 六级标题</h6>
 </div>
 
-## 段落、粗体、斜体、链接
+## 段落、粗体、斜体、链接、删除线
 
 [滕王阁序](https://baike.baidu.com/item/%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/480325)
 
@@ -49,6 +52,17 @@ Youth is not a time of life; it is a state of mind; it is not a matter of rosy c
 **Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul. Worry, fear, self-distrust bows the heart and turns the spirit back to dust.**
 
 ***Whether sixty or sixteen, there is in every human being’s heart the lure of wonder, the unfailing child-like appetite of what’s next, and the joy of the game of living. In the center of your heart and my heart there is a wireless station; so long as it receives messages of beauty, hope, cheer, courage and power from men and from the infinite, so long are you young.***
+
+~~删除线测试~~
+
+## 引用
+
+> 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！ 
+> 
+> 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
+> 
+> > 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
+
 
 ## 列表
 
@@ -74,18 +88,25 @@ Youth is not a time of life; it is a state of mind; it is not a matter of rosy c
   - 贪
   - 嗔
   - 痴
+- 测试
+  - 测试
+    - 测试
+      - 测试
+        - 测试
 
 ### 任务列表
 
 - [ ] 早
   - [ ] 起床
-  - [ ] 早餐
-- [ ] 中
-  - [ ] 午餐
-  - [ ] 午睡
+  - [x] 早餐
+- [x] 中
+  - [x] 午餐
+  - [x] 午睡
 - [ ] 晚
-  - [ ] 晚餐
-  - [ ] 睡觉
+  - [x] 晚餐
+  - [x] 睡觉
+- [ ] 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
+  - [x] 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
 
 ### 混合列表
 
@@ -101,13 +122,23 @@ Youth is not a time of life; it is a state of mind; it is not a matter of rosy c
 
 1. 有序混任务
    - [ ] 任务
-   - [ ] 任务
+     1. 有序
+     2. 有序
+   - [x] 任务
 2. 有序
 
 - 无序混任务
   - [ ] 任务
-  - [ ] 任务
-- 无序
+    - 无序
+    - 无序
+  - [x] 任务
+- 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
+- [ ] 忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！
+
+<ol start="1998">
+  <li>忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！</li>
+  <li>忌蜜符椅东耻椭究训小劝澄缚太阀聊缘资勿萘屁灭忌埃潜付、驾押哥程垛改呀妹宿饶哼汗热卓设介奈架败逮淬螟锣钼违授描漏背碳俺字傅页齐熏终说革肛泵附仕扬溉炼盏展肆柄猪遭股稼挖烫岸慎神孵孜苞雌稀问条亚尽、疆赤臭葬巾井籽巷，萤、天荆捆造浦偏洁农扣潜萌盘抽沈。笨薄帘氏，畔铃！</li>
+</ol>
 
 ## 分割线
 
@@ -115,7 +146,7 @@ Youth is not a time of life; it is a state of mind; it is not a matter of rosy c
 
 ## 图片
 
-![Gaussian Blur](https://lab.lepture.com/gaussian-blur/art.jpg "Gaussian Blue")
+![alternate text](images/wallhaven-6oxwpx.jpg "title")
 
 ## 表格
 
@@ -137,3 +168,10 @@ Youth is not a time of life; it is a state of mind; it is not a matter of rosy c
 if __name__ == '__main__':
     print("Hello, world!")
 ```
+
+## 脚注
+
+脚注 [^1] [^2] [^2]
+
+[^1]: 脚注1
+[^2]: 脚注2

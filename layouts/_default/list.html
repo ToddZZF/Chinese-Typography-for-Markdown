@@ -1,6 +1,7 @@
 {{ define "main" }}
-<ul class="page-list">
-    {{ range $.Pages }}
+<div class="main">
+    <ul class="page-list">
+        {{ range $.Pages }}
         <li class="page-item">
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             {{ if .IsPage }}
@@ -9,6 +10,7 @@
             <span>集合</span>
             {{ end }}
         </li>
-    {{ end }}
-</ul>
+        {{ end }}
+    </ul>
+</div>
 {{ end }}

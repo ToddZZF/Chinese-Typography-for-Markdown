@@ -19,7 +19,7 @@
         color: blue;
         text-decoration: none;
         transition: all 250ms ease-in;
-        box-shadow: 0 -1px rgba(0, 0, 255, 0.5)inset;
+        box-shadow: 0 -0px rgba(0, 0, 255, 0.5)inset;
         background-color: transparent;
     }
 
@@ -38,5 +38,9 @@
 
     a:visited::after{
         content: "✓";
+    }
+
+    del {
+        text-decoration: line-through solid currentColor;
     }
 }

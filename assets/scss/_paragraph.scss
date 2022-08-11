@@ -1,9 +1,0 @@
-@import "variables";
-
-@mixin paragraph {
-    p {
-        line-height: $line-height-normal;
-        margin-block-start: $margin-normal;
-        margin-block-end: $margin-large;
-    }
-}

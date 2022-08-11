@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin blockquote {
+    blockquote {
+        margin-block-start: $margin-small;
+        margin-block-end: $margin-normal;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        padding-inline-start: 1.7em;
+        padding-inline-end: 0;
+
+        border-left: 0.3em solid gray;
+    }
+}

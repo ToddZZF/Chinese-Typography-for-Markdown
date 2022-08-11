@@ -1,0 +1,38 @@
+@import "variables";
+@import "fonts";
+
+@mixin code {
+    p>code {
+        @include font-mono;
+        font-size: 0.9em;
+        padding-inline-start: 0.5em;
+        padding-inline-end: 0.5em;
+        padding-block-start: 1px;
+        padding-block-end: 1px;
+        border-radius: 0.2em;
+        border: 1px solid #eee;
+        background-color: hsl(0,0,95%);
+        word-wrap: break-word;
+    }
+
+    pre {
+        margin-block-start: $margin-normal;
+        margin-block-end: $margin-large;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        padding-block-start: $margin-small;
+        padding-block-end: $margin-small;
+        overflow: auto;
+        white-space: pre;
+        word-wrap: normal;
+        border-radius: 0.2em;
+
+        code {
+            @include font-mono;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+        }
+    }
+}

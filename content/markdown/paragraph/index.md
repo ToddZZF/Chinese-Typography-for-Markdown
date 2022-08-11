@@ -34,3 +34,6 @@ typography: yue
 
 另外要注意我们设置 margin 时最好用 `margin-block-start`/`margin-block-end`，而不是 `margin-top`/`margin-bottom`，以适应不同 `writing-mode`（从上到下、从右到左etc） 的需求。
 
+### 缩进
+
+纸质的中文排版要求段首缩进两个字，对于网页来说，缩进并不必要，因此段落并不设置缩进。若需要缩进，可以使用 `p-indent` class 来缩进（在包裹文章的div元素中使用）。

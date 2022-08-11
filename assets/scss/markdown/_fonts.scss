@@ -12,3 +12,7 @@
 @mixin font-fang-song {
     font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif
 }
+
+@mixin font-mono {
+    font-family: Monaco, Consolas, "Courier New", monospace
+}

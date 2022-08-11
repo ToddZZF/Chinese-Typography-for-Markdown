@@ -1,0 +1,90 @@
+@import "variables";
+
+@mixin list {
+
+    ul,
+    ol {
+        margin-block-start: $margin-small;
+        margin-block-end: $margin-normal;
+        padding-inline-start: 0;
+        display: table;
+    }
+
+    li {
+        counter-increment: list-item;
+        display: table-row;
+
+        &::before {
+            display: table-cell;
+            text-align: right;
+            height: 1em;
+            min-width: 2em;
+            white-space: nowrap;
+        }
+    }
+
+    ol {
+        &>li::before {
+            content: counter(list-item) ". ";
+        }
+    }
+
+    ul {
+        &>li::before {
+            content: "● ";
+        }
+        ul>li::before {
+            content: "○ ";
+        }
+        ul ul>li::before {
+            content: "◾ "
+        }
+        ul ul ul>li::before {
+            content: "◽ "
+        }
+        ul ul ul ul>li::before {
+            content: "• "
+        }
+    }
+
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    li input[type="checkbox"] {
+        font: inherit;
+        appearance: none;
+        margin-inline-start: -2em;
+        margin-inline-end: -0.3em;
+        margin-block-start: auto;
+        margin-block-end: auto;
+        width: 2em;
+        height: 1em;
+        display: inline-flex;
+        place-content: center;
+        border: 0;
+        padding: 0;
+
+        &::before {
+            height: 1em;
+            width: 1em;
+            border: 1px solid black;
+            line-height: 1em;
+            background: white;
+            text-align: center;
+        }
+
+        &:not(:checked)::before {
+            content: " ";
+        }
+
+        &:checked::before {
+            content: "✔"
+        }
+    }
+    
+}

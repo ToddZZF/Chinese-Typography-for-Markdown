@@ -1,0 +1,26 @@
+@import "variables";
+
+@mixin paragraph {
+    p {
+        line-height: $line-height-normal;
+        margin-block-start: $margin-normal;
+        margin-block-end: $margin-large;
+    }
+
+    &.p-indent>p {
+        text-indent: 2em;
+    }
+
+    hr {
+        display: block;
+        margin-block-start: $margin-large;
+        margin-block-end: $margin-large;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+        border: 0;
+        width: 61.8%;
+        height: 1px;
+        background: hsl(0, 0%, 0%);
+    }
+}

@@ -1,0 +1,19 @@
+@import "variables";
+
+@mixin footnote {
+    a.footnote-ref::before {
+        content: "[" !important;
+    }
+    a.footnote-ref::after {
+        content: "]" !important;
+    }
+    .footnotes a::after {
+        content: "" !important;
+    }
+    .footnotes li p {
+        margin: 0;
+    }
+    .footnotes ol>li::before {
+        content: "[" counter(list-item) "] ";
+    }
+}
